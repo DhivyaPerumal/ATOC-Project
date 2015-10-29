@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>:: ATOC ::</title>
+<link rel="stylesheet" href="../../resources/css/style.default.css" />
+<link rel="stylesheet" href="../../resources/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../resources/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css"
+	href="../../resources/css/dataTables.responsive.css">
+<link rel="stylesheet" href="../../resources/css/datepicker3.css"
+	rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script src="../../resources/js/jquery-1.10.2.min.js"></script>
+<script src="../../resources/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../resources/js/jquery-ui-1.10.3.min.js"></script>
+<script src="../../resources/js/bootstrap.min.js"></script>
+<script src="../../resources/js/modernizr.min.js"></script>
+<script src="../../resources/js/jquery.cookies.js"></script>
+<script src="../../resources/js/jquery.uniform.min.js"></script>
+<script src="../../resources/js/flot/jquery.flot.min.js"></script>
+<script src="../../resources/js/flot/jquery.flot.resize.min.js"></script>
+<script src="../../resources/js/jquery.slimscroll.js"></script>
+<script src="../../resources/prettify/prettify.js"></script>
+<script src="../../resources/js/custom.js"></script>
+<!--[if lte IE 8]>
+<script src="js/excanvas.min.js"></script>
+<![endif]-->
+<style type="text/css">
+#execution_table_length {
+	display: none;
+}
+</style>
+<style type="text/css" class="init">
+div.container {
+	max-width: 1200px
+}
+</style>
+</head>
+<body>
+	<div id="mainwrapper" class="mainwrapper">
+		<div class="header">
+			<div class="logo">
+				<a href="../dashboard/dashboard.html"><img
+					src="../../resources/images/atoc_logo.png" alt="" /></a>
+			</div>
+			<div class="headerinner">
+				<ul class="headmenu">
+					<li class="odd"><a href="../staticpages/aboutUs.html"> <span
+							class="head-icon fa fa-info-circle fa-4x"></span> <span
+							class="headmenu-label">About Us</span>
+					</a></li>
+					<li><a href="../staticpages/FAQ.html"><span
+							class="head-icon fa fa-pencil-square-o fa-4x"></span> <span
+							class="headmenu-label">FAQ</span> </a></li>
+					<li class="odd"><a href="../staticpages/Help.html"> <span
+							class="head-icon fa fa-question-circle fa-4x"></span> <span
+							class="headmenu-label">Help</span>
+					</a></li>
+					<li class="odd"><a href="../staticpages/notifications.html"> 
+						<span class="count" id="notification_Count"></span>
+						<span class="head-icon fa fa-bell-o fa-4x"></span> 
+						<span class="headmenu-label">Notifications</span>
+						</a>
+					</li>
+					<li class="right">
+						<div class="userloggedinfo">
+							<!-- Profile will set dynamically.-->
+							<img id="profileImg" alt="" />
+							<div class="userinfo">
+								<h5>
+									Hi&nbsp;&nbsp;<span id="userName_id"
+										style="font-style: italic;"></span>
+								</h5>
+								<ul>
+									<li><a href="../user/editProfile.html"><i
+											class="fa fa-pencil-square-o"></i>&nbsp; &nbsp;Edit Profile</a></li>
+									<li><a href="../user/changePassword.html"><i
+											class="fa fa-key"></i>&nbsp; &nbsp;Change Password</a></li>
+									<li><a href="#" id="logout_link"><i
+											class="fa fa-unlock"></i>&nbsp; &nbsp;Sign Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+				<!--headmenu-->
+			</div>
+		</div>
+		<div class="leftpanel">
+			<div class="leftmenu" id="orgoradminuser_menu_id">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="nav-header">ATOC Menu</li>
+					<li class="" id="dashboard"><a
+						href="../dashboard/dashboard.html"><i class="fa fa-tachometer">
+						</i>&nbsp;DashBoard</a></li>
+					<li class="dropdown" id="project"><a href=""><i
+							class="fa fa-table"></i>&nbsp;Projects</a>
+						<ul>
+							<li id="addproject"><a href="../project/newProject.html">Add
+									Project</a></li>
+							<li id="projectlist"><a href="../project/projects.html">Projects</a></li>
+						</ul></li>
+					<li class="dropdown" id="testSuite"><a href="#"><i
+							class="fa fa-th-list"> </i>&nbsp;Test Suites</a>
+						<ul style="display: none;">
+							<li id="addtestsuite"><a
+								href="../testsuite/newTestSuite.html">Add Test Suite</a></li>
+							<li id="testSuitelist"><a
+								href="../testsuite/testSuites.html">Test Suites</a></li>
+						</ul></li>
+					<li class="dropdown active" id="execution"><a href="#"><i
+							class="fa iconfa-cogs"> </i>&nbsp;Execution</a>
+						<ul style="display: block;">
+							<li id="executionHistory"><a
+								href="../execution/executionHistory.html">Execution History</a></li>
+							<li id="testExecution"><a
+								href="../execution/testExecution.html">Test Execution</a></li>
+						</ul></li>
+					<li class="dropdown" id="adminparent"><a href="#"><i
+							class="fa fa-user"> </i>&nbsp;Admin</a>
+						<ul style="display: none;">
+							<li id="createSeleniumProject"><a
+								href="../seleniumproject/createProjectByJar.html">Create
+									Selenium Project</a></li>
+							<li id="viewProjectByJar"><a
+								href="../seleniumproject/viewProjectByJar.html">Selenium
+									Projects</a></li>
+									<li id="configJar"><a href="../seleniumproject/seleniumConfig_jar.html">Configuration Jar</a></li>
+							<li id="generateCssSelector"><a
+								href="../seleniumproject/generateCssSelector.html">Generate
+									Css Selector </a></li>
+							<li id="adminaddOrgUser" class=""><a
+								href="../admin/addOrganizationUser.html">Add Org User</a></li>
+						</ul></li>
+					<li class="dropdown" id="reports"><a href="#"><i
+							class="fa fa-signal"> </i>&nbsp;Reports</a>
+						<ul style="display: none;">
+							<li><a href="../reports/reports.html">Execution
+									Comparison</a></li>
+						</ul></li>
+					<li class="" id="masterUserList"><a
+						href="../admin/masterUser.html"><i class="fa fa-list-alt">
+						</i>&nbsp;User Management</a></li>
+						
+						
+				</ul>
+			</div><!--leftmenu-->
+		</div>
+		<!-- leftpanel -->
+		<div class="rightpanel">
+			<ul class="breadcrumbs">
+				<li><a href="../dashboard/dashboard.html"><i
+						class="fa fa-home"></i></a> <span class="separator"></span></li>
+				<li>Execution History</li>
+				<li class="right" id="color_skin">
+                    <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-tint"></i>&nbsp;Change Skins</a>
+                    <ul class="dropdown-menu pull-right skin-color" >
+                        <li><a id = "default" href="default">Default</a></li>
+                        <li><a id = "navyblue" href="navyblue">Navy Blue</a></li>
+                        <li><a id = "palegreen" href="palegreen">Pale Green</a></li>
+                        <li><a id = "red" href="red">Red</a></li>
+                        <li><a id = "green" href="green">Green</a></li>
+                        <li><a id = "brown" href="brown">Brown</a></li>
+                    </ul>
+				</li>
+			</ul>
+			<!--pageheader-->
+			<div class="pageheader">
+				<div class="pageicon">
+					<i class="fa fa-table"></i>
+				</div>
+				<div class="pagetitle">
+					<!-- <h5>Reports</h5> -->
+					<h1>Execution History</h1>
+				</div>
+			</div>
+			<!--pageheader-->
+			<div class="maincontent">
+				<div class="maincontentinner">
+					<h4 class="widgettitle">
+						<i class='fa fa-table'></i>&nbsp;Execution Result
+					</h4>
+					<br>
+					<div class="form-group col-nr-6" style="text-align: center">
+											<!-- <input type="submit" class="btn btn-primary "
+												value="Compare" id="submitBtn" /> --> 
+											
+											<select id="downloadReport" >
+													<option value="pdf">PDF</option>
+													<option value="excel">Excel</option>
+											</select>
+													
+											<input type="submit" class="btn btn-primary"
+											id="download_btn" value = "Download" />
+												
+					</div>
+					
+					<div class="row">
+						<div id="dashboard-left" class="col-md-6">
+							<h4 class="widgettitle">
+								<i class="fa iconfa-list-alt"> </i>&nbsp;Test Suite Details
+							</h4>
+							<div class="widgetcontent form-horizontal">
+								<div class="form-group">
+									<label class="col-md-4">Project Name</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_projectname"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4">Test Suite Name</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_suiteid1"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4">Execution Name</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_executionname"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4">Start Time</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_starttime"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4">End Time</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_endtime"></span>
+									</div>
+								</div>
+							</div>
+							<br>
+							<h4 class="widgettitle">
+								<i class="fa iconfa-list-alt"></i>&nbsp;Test Execution Details
+							</h4>
+							<div class="widgetcontent form-horizontal">
+								<div class="form-group">
+									<label class="col-md-4">Total Tests</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_totaltests"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4">Total Passed</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_passed"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4">Total Failed</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_failed"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-4">Total Skipped</label> <label
+										class="col-md-1">:</label>
+									<div class="col-md-7">
+										<span id="execution_skipped"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="dashboard-right" class="col-md-6">
+							<h4 class="widgettitle">
+								<i class="fa iconfa-table"></i>&nbsp;Test Execution Result
+							</h4>
+							<div class="widgetcontent">
+
+								<div id="chartContainer" style="height: 435px;"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row col-md-12">
+						<div class="col-md-12">
+							<div class="accordion" id="accordion-2" style="display: none;">
+								<h4 id="failedtestaccordian">
+									<span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Failed
+									Test
+								</h4>
+								<div class="table-responsive">
+									<div class="row col-md-12">
+										<div class="col-md-12">
+											<table class="table table-bordered responsive nowrap "
+												id="failedTest_table">
+												<thead>
+													<tr>
+														<th></th>
+														<th>Exception</th>
+														<th>Test Name</th>
+														<th>Start Time</th>
+														<th>End Time</th>
+														<th>Signature</th>
+													</tr>
+												</thead>
+												<p>
+													<b>Note :</b> Click on "i" in below table to get Method Parameter Info.
+												</p>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<h4 id="passedtestaccordian">
+									<span class="glyphicon glyphicon-ok-circle"></span>&nbsp;Passed
+									Test
+								</h4>
+								<div class="table-responsive">
+									<div class="row col-md-12">
+										<div class="col-md-12">
+											<table class="table table-bordered responsive nowrap"
+												id="passedTest_table">
+												<thead>
+													<tr>
+														<th></th>
+														<th>Test Name</th>
+														<th>Start Time</th>
+														<th>End Time</th>
+														<th>Signature</th>
+													</tr>
+												</thead>
+												<p>
+													<b>Note :</b> Click on "i" in below table to get Method Parameter Info.
+												</p>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<h4 id="skippedtestaccordian">
+									<span class="glyphicon glyphicon-ban-circle"></span>&nbsp;Skipped
+									Test
+								</h4>
+								<div class="table-responsive table-striped">
+									<div class="row col-md-12">
+										<div class="col-md-12">
+											<table class="table table-bordered responsive nowrap"
+												id="skippedTest_table">
+												<thead>
+													<tr>
+														<th></th>
+														<th>Exception</th>
+														<th>Test Name</th>
+														<th>Start Time</th>
+														<th>End Time</th>
+														<th>Signature</th>
+													</tr>
+												</thead>
+												<p>
+													<b>Note :</b> Click on "i" in below table to get Method Parameter Info.
+												</p>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/.row-->
+						</div>
+					</div>
+					<div class="modal fade" id="nodataExecutionResult_modal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+										<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+									</button>
+									<h4 class="modal-title">Message</h4>
+								</div>
+								<div class="modal-body">
+									<p style="color: red">No Results Found.</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary"
+										id="exeResult_error_btn">Ok</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Chnages done for execution result exception in UI STARTS HERE -->
+					
+					<div class="modal fade" id="testExec_accordion_modal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+										<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+									</button>
+									<h4 class="modal-title">Execution Method Parameter</h4>
+								</div>
+								<div class="modal-body">
+									<p>
+									<table class="table table-bordered responsive nowrap"
+										id="execMParam_accordion_modal">
+										<thead>
+											<tr>
+												<!-- <th>Execution Parameter ID</th> -->
+												<th>Parameter Index</th>
+												<th>Parameter Value</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default"
+										data-dismiss="modal" id="close">Close</button>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					
+					<!-- Chnages done for execution result exception in UI ENDS HERE -->
+					
+					
+					<div class="modal fade" id="exeResException_modal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+										<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+									</button>
+									<h4 class="modal-title">Execution Result Exception</h4>
+								</div>
+								<div class="modal-body">
+									<p id= "exeResException_Methodname"> <b>Method Name : </b> </p>
+									<br /> <br />
+									<p id= "exeResException_Message">Execution Result Exception Message is : </p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default"
+										data-dismiss="modal" id="close">Close</button>
+								</div>
+							</div><!-- /.modal-content -->
+						</div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
+					
+					
+					<div class="footer">
+						<div class="footer-left">
+							<span>&copy; 2015. BPA Technologies. All Rights Reserved.</span>
+						</div>
+						<div class="footer-right">
+							<span>Powered by: <a href="http://www.bpatech.com"
+								target="_blank">BPA Technologies</a></span>
+						</div>
+					</div><!--footer-->
+				</div><!--maincontentinner-->
+			</div><!--maincontent-->
+		</div><!--rightpanel-->
+	</div><!--mainwrapper-->
+	<!-- custom block Ui STARTS HERE-->
+	<div id="loading-div-background" style="display: none;">
+		<div id="loading-div" class="ui-corner-all">
+			<img style="height: 50%; margin: 10px;"
+				src="../../resources/images/loading.gif" alt="Loading.." />
+			<h4 style="color: #ffffff; font-size: 18px; font-weight: normal;">Please
+				wait...</h4>
+		</div>
+	</div>
+	<!-- custom block Ui ENDS HERE-->
+	<script src="../../resources/js/atoc_common.js"></script>
+	<script src="../../view/execution/executionResult.js"></script>
+	<script src="../../resources/js/config.js"></script>
+	<script src="../../resources/js/RestrictRedirection.js"></script>
+	<script src="../../resources/js/BackButtonRestrict.js"></script>
+	<script src="../../resources/js/Application.js"></script>
+	<script type="text/javascript"
+		src="../../resources/js/jquery.blockUI.js"></script>
+	<script src="../../resources/js/jquery.slimscroll.js"></script>
+	<script src="../../resources/js/jquery.dataTables.js"></script>
+	<script src="../../resources/js/datatable_responsive.js"></script>
+	<script src="../../resources/js/bootstrap-datepicker.js"></script>
+	<script src="../../resources/js/BackButtonRestrict.js"></script>
+	<script src="../../resources/js/canvasjs.min.js"></script>
+	<script src="../../resources/js/jquery.flot.min.js"></script>
+	<script src="../../resources/js/jquery.flot.pie.min.js"></script>
+	<script>
+		setUserTokenToRequestHeader(sessionStorage.getItem("userToken"));
+		setProfileImage(sessionStorage.getItem("profileImgData"));
+	</script>
+</body>
+</html>

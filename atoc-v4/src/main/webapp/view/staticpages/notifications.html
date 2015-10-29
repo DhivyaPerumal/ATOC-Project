@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>:: ATOC ::</title>
+<link rel="stylesheet" href="../../resources/css/style.default.css" />
+<link rel="stylesheet" href="../../resources/css/responsive-tables.css">
+<link rel="stylesheet" href="../../resources/css/font-awesome.css" />
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script src="../../resources/js/jquery-1.10.2.min.js"></script>
+<script src="../../resources/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../resources/js/jquery-ui-1.10.3.min.js"></script>
+<script src="../../resources/js/bootstrap.min.js"></script>
+<script src="../../resources/js/modernizr.min.js"></script>
+<script src="../../resources/js/jquery.cookies.js"></script>
+<script src="../../resources/js/jquery.uniform.min.js"></script>
+<script src="../../resources/js/flot/jquery.flot.min.js"></script>
+<script src="../../resources/js/flot/jquery.flot.resize.min.js"></script>
+<script src="../../resources/js/responsive-tables.js"></script>
+<script src="../../resources/js/jquery.slimscroll.js"></script>
+<script src="../../resources/js/custom.js"></script>
+<script src="../../resources/js/canvasjs.min.js"></script>
+<!--[if lte IE 8]>
+<script src="js/excanvas.min.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div id="mainwrapper" class="mainwrapper">
+		<div class="header">
+			<div class="logo">
+				<a href="#"><img src="../../resources/images/atoc_logo.png"
+					alt="" /></a>
+			</div>
+			<div class="headerinner">
+				<ul class="headmenu">
+					<li class="odd"><a href="../staticpages/aboutUs.html"> <span
+							class="head-icon fa fa-info-circle fa-4x"></span> <span
+							class="headmenu-label">About Us</span>
+					</a></li>
+					<li><a href="../staticpages/FAQ.html"><span
+							class="head-icon fa fa-pencil-square-o fa-4x"></span> <span
+							class="headmenu-label">FAQ</span> </a></li>
+					<li class="odd"><a href="../staticpages/Help.html"> <span
+							class="head-icon fa fa-question-circle fa-4x"></span> <span
+							class="headmenu-label">Help</span>
+					</a></li>
+					<li class="odd"><a href="../staticpages/notifications.html"  class="dropdown-toggle" data-toggle="dropdown" data-target="#"> 
+					<span class="count" id="notification_Count"></span>
+					<span class="head-icon fa fa-bell-o fa-4x"></span> 
+					<span class="headmenu-label">Notifications</span>
+			</a>
+			<ul class="dropdown-menu" id="">
+                        <li class="nav-header">Notifications</li>
+						<li id="notification_dropdown"></li>
+                        <li id="viewMore"><a href="">View More Message</a></li> 
+                    </ul>
+			</li>
+					<li class="right">
+						<div class="userloggedinfo">
+							<!-- Profile will set dynamically.-->
+							<img id="profileImg" alt="" />
+							<div class="userinfo">
+								<h5>
+									Hi&nbsp;&nbsp;<span id="userName_id"
+										style="font-style: italic;"></span>
+								</h5>
+								<ul>
+									<li><a href="../user/editProfile.html"><i
+											class="fa fa-pencil-square-o"></i>&nbsp; &nbsp;Edit Profile</a></li>
+									<li><a href="../user/changePassword.html"><i
+											class="fa fa-key"></i>&nbsp; &nbsp;Change Password</a></li>
+									<li><a href="#" id="logout_link"><i
+											class="fa fa-unlock"></i>&nbsp; &nbsp;Sign Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!--headmenu-->
+			</div>
+		</div>
+		<div class="leftpanel">
+			<div class="leftmenu" id="orgoradminuser_menu_id" style="display: none;">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="nav-header">ATOC Menu</li>
+					<li class="" id="dashboard"><a
+						href="../dashboard/dashboard.html"><i class="fa fa-tachometer">
+						</i>&nbsp;DashBoard</a></li>
+					<li class="dropdown" id="project"><a href=""><i
+							class="fa fa-table"></i>&nbsp;Projects</a>
+						<ul>
+							<li id="addproject"><a href="../project/newProject.html">Add
+									Project</a></li>
+							<li id="projectlist"><a href="../project/projects.html">Projects</a></li>
+						</ul></li>
+					<li class="dropdown" id="testSuite"><a href="#"><i
+							class="fa fa-th-list"> </i>&nbsp;Test Suites</a>
+						<ul style="display: none;">
+							<li id="addtestsuite"><a
+								href="../testsuite/newTestSuite.html">Add Test Suite</a></li>
+							<li id="testSuitelist"><a
+								href="../testsuite/testSuites.html">Test Suites</a></li>
+						</ul></li>
+					<li class="dropdown" id="execution"><a href="#"><i
+							class="fa iconfa-cogs"> </i>&nbsp;Execution</a>
+						<ul style="display: none;">
+							<li id="executionHistory"><a
+								href="../execution/executionHistory.html">Execution History</a></li>
+							<li id="testExecution"><a
+								href="../execution/testExecution.html">Test Execution</a></li>
+						</ul></li>
+					<li class="dropdown" id="adminparent"><a href="#"><i
+							class="fa fa-user"> </i>&nbsp;Admin</a>
+						<ul style="display: none;">
+							<li id="createSeleniumProject"><a
+								href="../seleniumproject/createProjectByJar.html">Create
+									Selenium Project</a></li>
+							<li id="viewProjectByJar"><a
+								href="../seleniumproject/viewProjectByJar.html">Selenium
+									Projects</a></li>
+							<li id="configJar"><a href="../seleniumproject/seleniumConfig_jar.html">Configuration Jar</a></li>
+							<li id="generateCssSelector"><a
+								href="../seleniumproject/generateCssSelector.html">Generate
+									Css Selector </a></li>
+							<li id="adminaddOrgUser" class=""><a
+								href="../admin/addOrganizationUser.html">Add Org User</a></li>
+						</ul></li>
+					<li class="dropdown" id="reports"><a href="#"><i
+							class="fa fa-signal"> </i>&nbsp;Reports</a>
+						<ul style="display: none;">
+							<li><a href="../reports/reports.html">Execution
+									Comparison</a></li>
+						</ul></li>
+					<li class="" id="masterUserList"><a
+						href="../admin/masterUser.html"><i class="fa fa-list-alt">
+						</i>&nbsp;User Management</a></li>
+						
+				</ul>
+			</div>
+			<!--leftmenu-->
+			<div class="leftmenu" id="masteradmin_menu_id" style="display: none;">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="nav-header">ATOC Menu</li>
+					<li class="active" id="regapproval"><a
+						href="../dashboard/registrationApprovals.html"><i
+							class="fa fa-check-square-o"></i>&nbsp;Registration Approval </a></li>
+					<li class="" id="addorganization"><a
+						href="../admin/addOrganization.html"><i
+							class="fa fa-plus-circle"> </i>&nbsp;Add Organization</a></li>
+					<li class="" id="organizations"><a
+						href="../admin/organizations.html"><i class="fa fa-th-list">
+						</i>&nbsp;Organizations</a></li>
+					<li class="" id="addmasteruser"><a
+						href="../admin/addMasterUser.html"><i class="fa fa-user-md"></i>&nbsp;Add
+							Master User </a></li>
+					<li class="" id="addorguser"><a
+						href="../admin/addOrganizationUser.html"><i
+							class="fa fa-user "></i>&nbsp;Add Org User</a></li>
+					<li class="" id="masterUserList"><a
+						href="../admin/masterUser.html"><i class="fa fa-list-alt">
+						</i>&nbsp;User Management</a></li>
+						
+				</ul>
+			</div>
+			<!--leftmenu-->
+		</div>
+		<!-- leftpanel -->
+		<div class="rightpanel">
+			<ul class="breadcrumbs">
+				<li>Notifications</li>
+				<li class="right" id="color_skin">
+                    <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-tint"></i>&nbsp;Change Skins</a>
+                    <ul class="dropdown-menu pull-right skin-color" >
+                        <li><a id = "default" href="default">Default</a></li>
+                        <li><a id = "navyblue" href="navyblue">Navy Blue</a></li>
+                        <li><a id = "palegreen" href="palegreen">Pale Green</a></li>
+                        <li><a id = "red" href="red">Red</a></li>
+                        <li><a id = "green" href="green">Green</a></li>
+                        <li><a id = "brown" href="brown">Brown</a></li>
+                    </ul>
+				</li>
+			</ul>
+			<!--pageheader-->
+			<div class="pageheader">
+				<div class="pageicon">
+					<i class="fa iconfa-info-sign"></i>
+				</div>
+				<div class="pagetitle">
+					<!-- <h5>Reports</h5> -->
+					<h1>Notifications</h1>
+				</div>
+			</div>
+			<div class="maincontent" id="notification_panel">
+				<div class="maincontentinner">
+					<div class="row">
+						<div class="col-md-12 ">
+									<div class="col-md-12 ">
+										<div class='col-md-3'>
+											<strong>Notification Title</strong>
+										</div>
+										<div class='col-md-2'>
+											<strong>:</strong>
+										</div>
+										<div class='col-md-7'>
+											<span id="title"></span>
+										</div>
+									</div>
+									<div class="col-md-12 ">
+										<div class='col-md-3'>
+											<strong>Notification Message</strong>
+										</div>
+										<div class='col-md-2'>
+											<strong>:</strong>
+										</div>
+										<div class='col-md-7'>
+											<span id="message"></span>
+										</div>
+									</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="footer-left">
+							<span>&copy; 2015. BPA Technologies. All Rights Reserved.</span>
+						</div>
+						<div class="footer-right">
+							<span>Powered by: <a href="http://www.bpatech.com"
+								target="_blank">BPA Technologies</a></span>
+						</div>
+					</div>
+					<!--footer-->
+				</div>
+				<!--maincontentinner-->
+			</div>
+			<!--maincontent-->
+		</div>
+		<!--rightpanel-->
+	</div>
+	<!--mainwrapper-->
+	<script src="../../resources/js/atoc_common.js"></script>
+	<script src="../../view/staticpages/notifications.js"></script>
+	<script src="../../resources/js/config.js"></script>
+	<script src="../../resources/js/RestrictRedirection.js"></script>
+	<script src="../../resources/js/BackButtonRestrict.js"></script>
+	<script src="../../resources/js/Application.js"></script>
+	<script type="text/javascript"
+		src="../../resources/js/jquery.blockUI.js"></script>
+	<script>
+		setUserTokenToRequestHeader(sessionStorage.getItem("userToken"));
+		setProfileImage(sessionStorage.getItem("profileImgData"));
+	</script>
+</body>
+</html>

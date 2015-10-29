@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>:: ATOC ::</title>
+
+<link rel="stylesheet" href="../../resources/css/style.default.css" />
+<!--
+<link rel="stylesheet" href="../../resources/css/responsive-tables.css">
+-->
+
+
+
+<link rel="stylesheet" href="../../resources/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../resources/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css"
+	href="../../resources/css/dataTables.responsive.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+<script src="../../resources/js/jquery-1.10.2.min.js"></script>
+<script src="../../resources/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../resources/js/jquery-ui-1.10.3.min.js"></script>
+
+<script src="../../resources/js/bootstrap.min.js"></script>
+
+<script src="../../resources/js/modernizr.min.js"></script>
+<script src="../../resources/js/jquery.cookies.js"></script>
+<script src="../../resources/js/jquery.uniform.min.js"></script>
+<script src="../../resources/js/flot/jquery.flot.min.js"></script>
+<script src="../../resources/js/flot/jquery.flot.resize.min.js"></script>
+
+<script src="../../resources/js/jquery.slimscroll.js"></script>
+<script src="../../resources/prettify/prettify.js"></script>
+
+<script src="../../resources/js/custom.js"></script>
+
+
+<!--[if lte IE 8]>
+<script src="js/excanvas.min.js"></script>
+<![endif]-->
+<style type="text/css">
+#CustomerDataTable_length {
+	display: none;
+}
+</style>
+<style type="text/css" class="init">
+div.container {
+	max-width: 1200px
+}
+</style>
+</head>
+
+<body>
+
+	<div id="mainwrapper" class="mainwrapper">
+
+		<div class="header">
+			<div class="logo">
+				<a href="../dashboard/registrationApprovals.html"><img
+					src="../../resources/images/atoc_logo.png" alt="" /></a>
+			</div>
+			<div class="headerinner">
+				<ul class="headmenu">
+					<li class="odd"><a href="../staticpages/aboutUs.html"> <span
+							class="head-icon fa fa-info-circle fa-4x"></span> <span
+							class="headmenu-label">About Us</span>
+					</a></li>
+					<li><a href="../staticpages/FAQ.html"><span
+							class="head-icon fa fa-pencil-square-o fa-4x"></span> <span
+							class="headmenu-label">FAQ</span> </a></li>
+					<li class="odd"><a href="../staticpages/Help.html"> <span
+							class="head-icon fa fa-question-circle fa-4x"></span> <span
+							class="headmenu-label">Help</span>
+					</a></li>
+					<li class="odd"><a href="../staticpages/notifications.html"> 
+						<span class="count" id="notification_Count"></span>
+						<span class="head-icon fa fa-bell-o fa-4x"></span> 
+						<span class="headmenu-label">Notifications</span>
+						</a>
+					</li>
+					<li class="right">
+						<div class="userloggedinfo">
+							<!-- Profile will set dynamically.-->
+							<img id="profileImg" alt="" />
+							<div class="userinfo">
+								<h5>
+									Hi&nbsp;&nbsp;<span id="userName_id"
+										style="font-style: italic;"></span>
+									<!-- <small>- <span id="userEmail_id"></span></small> -->
+								</h5>
+
+								<ul>
+									<li><a href="../user/editProfile.html"><i
+											class="fa fa-pencil-square-o"></i>&nbsp; &nbsp;Edit Profile</a></li>
+									<li><a href="../user/changePassword.html"><i
+											class="fa fa-key"></i>&nbsp; &nbsp;Change Password</a></li>
+									<li><a href="#" id="logout_link"><i
+											class="fa fa-unlock"></i>&nbsp; &nbsp;Sign Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+				<!--headmenu-->
+			</div>
+		</div>
+
+		<div class="leftpanel">
+			<div class="leftmenu" id="masteradmin_menu_id">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="nav-header">ATOC Menu</li>
+
+
+					<li class="" id="regapproval"><a
+						href="../dashboard/registrationApprovals.html"><i
+							class="fa fa-check-square-o"></i>&nbsp;Registration Approval </a></li>
+					<li class="" id="addorganization"><a
+						href="../admin/addOrganization.html"><i
+							class="fa fa-plus-circle"> </i>&nbsp;Add Organization</a></li>
+					<li class="active" id="organizations"><a
+						href="../admin/organizations.html"><i class="fa fa-th-list">
+						</i>&nbsp;Organizations</a></li>
+					<li class="" id="addmasteruser"><a
+						href="../admin/addMasterUser.html"><i class="fa fa-user-md"></i>&nbsp;Add Master User </a></li>
+					<li class="" id="addorguser"><a
+						href="../admin/addOrganizationUser.html"><i class="fa fa-user "></i>&nbsp;Add Org User</a></li>
+					<li class="" id="masterUserList"><a
+						href="../admin/masterUser.html"><i class="fa fa-list-alt">
+						</i>&nbsp;User Management</a></li>
+				</ul>
+			</div>
+			<!--leftmenu-->
+
+		</div>
+		<!-- leftpanel -->
+
+		<div class="rightpanel">
+
+
+			<ul class="breadcrumbs">
+				<li><a href="../dashboard/registrationApprovals.html"><i
+						class="fa fa-home"></i></a> <span class="separator"></span></li>
+				<li>Organizations</li>
+				<li class="right" id="color_skin">
+                    <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-tint"></i>&nbsp;Change Skins</a>
+                    <ul class="dropdown-menu pull-right skin-color" >
+                        <li><a id = "default" href="default">Default</a></li>
+                        <li><a id = "navyblue" href="navyblue">Navy Blue</a></li>
+                        <li><a id = "palegreen" href="palegreen">Pale Green</a></li>
+                        <li><a id = "red" href="red">Red</a></li>
+                        <li><a id = "green" href="green">Green</a></li>
+                        <li><a id = "brown" href="brown">Brown</a></li>
+                    </ul>
+				</li>
+			</ul>
+			<!--pageheader-->
+			<div class="pageheader">
+				<div class="pageicon">
+					<i class="fa fa-th-list"></i>
+				</div>
+				<div class="pagetitle">
+					<!-- <h5>Reports</h5> -->
+					<h1>Organizations</h1>
+				</div>
+			</div>
+
+			<div class="maincontent">
+				<div class="maincontentinner">
+					<div class="panel panel-default">
+					<h4 class="widgettitle"><i class="fa fa-th-list"></i>&nbsp;Organizations</h4>
+					<div class='panel-body filters'>
+					
+					<table id="organizationList_table"
+						class="table table-bordered responsive nowrap" cellspacing="0"
+						width="100%">
+						<thead>
+							<tr>
+								<th>Organization Name</th>
+								<th>Email</th>
+								<th>Contact Number</th>
+								<th>Fax</th>
+							</tr>
+						</thead>
+					</table>
+					</div>
+					</div>
+					<div class="footer">
+						<div class="footer-left">
+							<span>&copy; 2015. BPA Technologies. All Rights Reserved.</span>
+						</div>
+						<div class="footer-right">
+							<span>Powered by: <a href="http://www.bpatech.com" target="_blank">BPA
+									Technologies</a></span>
+						</div>
+					</div>
+					<!--footer-->
+
+				</div>
+				<!--maincontentinner-->
+			</div>
+			<!--maincontent-->
+
+		</div>
+		<!--rightpanel-->
+
+	</div>
+	<!--mainwrapper-->
+
+	<!-- custom block Ui STARTS HERE-->
+	<div id="loading-div-background" style="display: none;">
+		<div id="loading-div" class="ui-corner-all">
+			<img style="height: 50%; margin: 10px;"
+				src="../../resources/images/loading.gif" alt="Loading.." />
+			<h4 style="color: #ffffff; font-size: 18px; font-weight: normal;">Please
+				wait...</h4>
+		</div>
+	</div>
+	<!-- custom block Ui ENDS HERE-->
+	</div>
+
+	<script src="../../resources/js/atoc_common.js"></script>
+	<script src="../../view/admin/organizations.js"></script>
+	<script src="../../resources/js/config.js"></script>
+	<script src="../../resources/js/RestrictRedirection.js"></script>
+	<script src="../../resources/js/BackButtonRestrict.js"></script>
+
+	<script src="../../resources/js/jquery.dataTables.js"></script>
+	<script src="../../resources/js/datatable_responsive.js"></script>
+	<!--
+ <script src="../../resources/js/responsive-tables.js"></script>
+ -->
+	<script src="../../resources/js/Application.js"></script>
+	<script type="text/javascript"
+		src="../../resources/js/jquery.blockUI.js"></script>
+	<script>
+		setUserTokenToRequestHeader(sessionStorage.getItem("userToken"));
+		setProfileImage(sessionStorage.getItem("profileImgData"));
+	</script>
+
+</body>
+</html>

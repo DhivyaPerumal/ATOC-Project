@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATOC</title>
+	<style>
+		.p 
+		{
+		  font-family: sans-serif;	
+		}
+		.logo 
+		{
+			width: 240px;
+		}
+
+	</style>
+  </head>
+  <body>
+	<table>
+	  <tr style="background:#0866c6; height: 110px;">
+		<td>
+			<div class="logo">
+				<img src="cid:atoclogo" />
+			</div>
+		</td>
+	  </tr>	
+      <tr>
+	  <td>
+		<table style="background:#F2F2F2;">
+          <tr>
+			<td><p>Hi ${user}</p><br/></td>
+		  </tr>
+		  <tr>
+			<td>
+			 <p>Please upload your ${projectjar} file into the FTP location specified below:</p>
+			  <p>FTP URL  : ${ftpurl}</p>
+			  <p>Port No  : ${portno}</p>
+			  <p>Username : ${username}</p>
+			  <p>Password : ${password}</p> 
+			  <p><b>Please do not reply to this auto generated email.</b></p><br/>
+              <p>Thanks,</p>
+			  <p>ATOC Team.</p>
+            </td>
+          </tr>
+        </table>
+	 </td>
+	  </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATOC - Test Execution Result</title>
+	<style>
+		.p 
+		{
+		  font-family: sans-serif;	
+		}
+		.logo 
+		{
+			width: 240px;
+		}
+
+	</style>
+  </head>
+  <body>
+	<table>
+	  <tr style="background:#0866c6; height: 110px;">
+		<td>
+			<div class="logo">
+				<img src="cid:atoclogo" />
+			</div>
+		</td>
+	  </tr>	
+      <tr>
+	  <td>
+		<table style="background:#F2F2F2; height: 110px;">
+          <tr>
+			<td><p>Hi ${firstName}</p><br/></td>
+			<br/>
+		  </tr>
+		  <tr>
+			<td>
+			  <p>Your test suite execution <b>${testExecutionname} </b>completed successfully.</p>
+			  <br />
+			  <p><b>Project Name</b>  : ${projectname}</p>
+			  <p><b>Test Suite Name</b>  : ${testsuitename}</p>
+			  <p><b>Total Tests</b>  : ${totaltests}</p>
+			  <p><b>Total Passed</b>  : ${passedtests}</p>
+			  <p><b>Total Failed</b>  : ${failedtests}</p>
+			  <p><b>Total Skipped</b>  : ${skippedtests}</p>
+			  <br />
+			  <p><b>Operating System</b>  : ${operatingSystem}</p>
+			  <p><b>Browser </b>  : ${browser}</p>
+			  <p><b>Browser Version</b>  : ${browserVersion}</p>
+			   <br />
+			  <p>${content}</p><br/>
+			  <p><b>Please do not reply to this auto generated email.</b></p><br/>
+              <p>Thanks,</p>
+			  <p>ATOC Team.</p>
+            </td>
+          </tr>
+        </table>
+	 </td>
+	  </tr>
+    </table>
+  </body>
+</html>

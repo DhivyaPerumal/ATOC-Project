@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>:: ATOC ::</title>
+
+<link rel="stylesheet" href="../../resources/css/style.default.css" />
+<!--
+<link rel="stylesheet" href="../../resources/css/responsive-tables.css">
+-->
+
+
+
+<link rel="stylesheet" href="../../resources/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../resources/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css"
+	href="../../resources/css/dataTables.responsive.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+<script src="../../resources/js/jquery-1.10.2.min.js"></script>
+<script src="../../resources/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../resources/js/jquery-ui-1.10.3.min.js"></script>
+
+<script src="../../resources/js/bootstrap.min.js"></script>
+
+<script src="../../resources/js/modernizr.min.js"></script>
+<script src="../../resources/js/jquery.cookies.js"></script>
+<script src="../../resources/js/jquery.uniform.min.js"></script>
+<script src="../../resources/js/flot/jquery.flot.min.js"></script>
+<script src="../../resources/js/flot/jquery.flot.resize.min.js"></script>
+
+<script src="../../resources/js/jquery.slimscroll.js"></script>
+<script src="../../resources/prettify/prettify.js"></script>
+
+<script src="../../resources/js/custom.js"></script>
+
+
+<!--[if lte IE 8]>
+<script src="js/excanvas.min.js"></script>
+<![endif]-->
+<style type="text/css" class="init">
+div.container {
+	max-width: 1200px
+}
+</style>
+</head>
+
+<body>
+
+	<div id="mainwrapper" class="mainwrapper">
+
+		<div class="header">
+			<div class="logo">
+				<a href="#" id="addOrgUser_logo"><img
+					src="../../resources/images/atoc_logo.png" alt="" /></a>
+			</div>
+			<div class="headerinner">
+				<ul class="headmenu">
+					<li class="odd"><a href="../staticpages/aboutUs.html"> <span
+							class="head-icon fa fa-info-circle fa-4x"></span> <span
+							class="headmenu-label">About Us</span>
+					</a></li>
+					<li><a href="../staticpages/FAQ.html"><span
+							class="head-icon fa fa-pencil-square-o fa-4x"></span> <span
+							class="headmenu-label">FAQ</span> </a></li>
+					<li class="odd"><a href="../staticpages/Help.html"> <span
+							class="head-icon fa fa-question-circle fa-4x"></span> <span
+							class="headmenu-label">Help</span>
+					</a></li>
+					<li class="odd"><a href="../staticpages/notifications.html"> 
+						<span class="count" id="notification_Count"></span>
+						<span class="head-icon fa fa-bell-o fa-4x"></span> 
+						<span class="headmenu-label">Notifications</span>
+						</a>
+					</li>
+			
+					<li class="right">
+						<div class="userloggedinfo">
+							<!-- Profile will set dynamically.-->
+							<img id="profileImg" alt="" />
+							<div class="userinfo">
+								<h5>
+									Hi&nbsp;&nbsp;<span id="userName_id"
+										style="font-style: italic;"></span>
+									<!-- <small>- <span id="userEmail_id"></span></small> -->
+								</h5>
+
+								<ul>
+									<li><a href="../user/editProfile.html"><i
+											class="fa fa-pencil-square-o"></i>&nbsp; &nbsp;Edit Profile</a></li>
+									<li><a href="../user/changePassword.html"><i
+											class="fa fa-key"></i>&nbsp; &nbsp;Change Password</a></li>
+									<li><a href="#" id="logout_link"><i
+											class="fa fa-unlock"></i>&nbsp; &nbsp;Sign Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+				<!--headmenu-->
+			</div>
+		</div>
+
+		<div class="leftpanel">
+
+			<div class="leftmenu" id="orgoradminuser_menu_id" style="display:none;">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="nav-header">ATOC Menu</li>
+					<li class="" id="dashboard"><a
+						href="../dashboard/dashboard.html"><i class="fa fa-tachometer">
+						</i>&nbsp;DashBoard</a></li>
+
+					<li class="dropdown" id="project"><a href=""><i
+							class="fa fa-table"></i>&nbsp;Projects</a>
+						<ul>
+							<li id="addproject"><a href="../project/newProject.html">Add
+									Project</a></li>
+							<li id="projectlist"><a href="../project/projects.html">Projects</a></li>
+						</ul></li>
+					<li class="dropdown" id="testSuite"><a href="#"><i
+							class="fa fa-th-list"> </i>&nbsp;Test Suites</a>
+						<ul style="display: none;">
+							<li id="addtestsuite"><a
+								href="../testsuite/newTestSuite.html">Add Test Suite</a></li>
+							<li id="testSuitelist"><a
+								href="../testsuite/testSuites.html">Test Suites</a></li>
+						</ul></li>
+
+					<li class="dropdown" id="execution"><a href="#"><i
+							class="fa iconfa-cogs"> </i>&nbsp;Execution</a>
+						<ul style="display: none;">
+							<li id="executionHistory"><a
+								href="../execution/executionHistory.html">Execution History</a></li>
+							<li id="testExecution"><a
+								href="../execution/testExecution.html">Test Execution</a></li>
+						</ul></li>
+					<li class="dropdown active" id="adminparent"><a href="#"><i
+							class="fa fa-user"> </i>&nbsp;Admin</a>
+						<ul style="display: block;">
+							<li id="createSeleniumProject"><a
+								href="../seleniumproject/createProjectByJar.html">Create
+									Selenium Project</a></li>
+							<li id="viewProjectByJar"><a
+								href="../seleniumproject/viewProjectByJar.html">Selenium
+									Projects</a></li>
+							<li id="configJar"><a href="../seleniumproject/seleniumConfig_jar.html">Configuration Jar</a></li>
+							<li id="generateCssSelector"><a
+								href="../seleniumproject/generateCssSelector.html">Generate
+									Css Selector </a></li>
+						  <li id="adminaddOrgUser"class=""><a href="../admin/addOrganizationUser.html">Add Org User</a></li>
+
+
+						</ul></li>
+					<li class="dropdown" id="reports"><a href="#"><i
+							class="fa fa-signal"> </i>&nbsp;Reports</a>
+						<ul style="display: none;">
+							<li><a href="../reports/reports.html">Execution Comparison</a></li>
+						</ul></li>
+						<li class="" id="masterUserList"><a href="../admin/masterUser.html"><i class="fa fa-list-alt">
+						</i>&nbsp;User Management</a></li>
+						
+
+				</ul>
+			</div>
+			<!--leftmenu-->
+
+			<div class="leftmenu" id="masteradmin_menu_id">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="nav-header">ATOC Menu</li>
+
+
+					<li class="" id="regapproval"><a
+						href="../dashboard/registrationApprovals.html"><i
+							class="fa fa-check-square-o"></i>&nbsp;Registration Approval </a></li>
+					<li class="" id="addorganization"><a
+						href="../admin/addOrganization.html"><i
+							class="fa fa-plus-circle"> </i>&nbsp;Add Organization</a></li>
+					<li class="" id="organizations"><a
+						href="../admin/organizations.html"><i class="fa fa-th-list">
+						</i>&nbsp;Organizations</a></li>
+					<li class="" id="addmasteruser"><a
+						href="../admin/addMasterUser.html"><i class="fa fa-user-md"></i>&nbsp;Add Master User </a></li>
+					<li class="" id="addorguser"><a
+						href="../admin/addOrganizationUser.html"><i class="fa fa-user "></i>&nbsp;Add Org User</a></li>
+                    <li class="" id="masterUserList"><a href="../admin/masterUser.html"><i class="fa fa-list-alt">
+						</i>&nbsp;User Management</a></li>
+
+
+
+				</ul>
+			</div>
+			<!--leftmenu-->
+
+		</div>
+		<!-- leftpanel -->
+
+		<div class="rightpanel">
+			<ul class="breadcrumbs">
+				<li><a id="addorguser_breadcrumb"
+					href="#"><i
+						class="fa fa-home"></i></a> <span class="separator"></span></li>
+				<li>Add Organization User</li>
+				<li class="right" id="color_skin">
+                    <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-tint"></i>&nbsp;Change Skins</a>
+                    <ul class="dropdown-menu pull-right skin-color" >
+                        <li><a id = "default" href="default">Default</a></li>
+                        <li><a id = "navyblue" href="navyblue">Navy Blue</a></li>
+                        <li><a id = "palegreen" href="palegreen">Pale Green</a></li>
+                        <li><a id = "red" href="red">Red</a></li>
+                        <li><a id = "green" href="green">Green</a></li>
+                        <li><a id = "brown" href="brown">Brown</a></li>
+                    </ul>
+				</li>
+			</ul>
+			<!--pageheader-->
+			<div class="pageheader">
+				<div class="pageicon">
+					<i class="fa fa-user "></i>
+				</div>
+				<div class="pagetitle">
+					<!-- <h5>Reports</h5> -->
+					<h1>Add Organization User</h1>
+				</div>
+			</div>
+			<!--pageheader-->
+			<div class="maincontent">
+				<div class="maincontentinner">
+					<div class="row col-md-12">
+						<div class="col-md-12">
+							<div class="panel panel-default">
+								<h4 class="widgettitle"><i class="fa fa-user "></i>&nbsp;Add Organization User</h4>
+								<form>
+									<div class="panel-body">
+										<p id="fieldsNotEmpty" style="color: red; display: none">
+											Fields should not be empty.</p>
+										<div class="form-group">
+											<label for="selectOrgName">Select Organization</label><font
+												color="red">*</font> <select class="form-control"
+												id="orgName_dropdownselect">
+												<option value="" disabled="disabled" selected="Selected">Select
+													Organization</option>
+											</select>
+
+											<p id="select_org_error" style="color: red; display: none;">
+												Please select organization.</p>
+										</div>
+										<div class="form-group">
+											<label for="name">First Name</label><font color="red">*&nbsp;</font>
+											<input type="text1" class="form-control only_alphabets"
+												id="firstname" required="required"
+												placeholder="Enter First Name" maxlength="30">
+											<p id="addOrgUserError" style="color: red; display: none;">
+												Please enter first name.</p>
+										</div>
+										<div class="form-group">
+											<label for="name">Last Name</label><font color="red">*&nbsp;</font>
+											<input type="text1" class="form-control only_alphabets"
+												id="lastname" required="required"
+												placeholder="Enter Last Name" maxlength="30">
+											<p id="addOrgUserErrorLast"
+												style="color: red; display: none;">Please enter last
+												name.</p>
+										</div>
+										<div class="form-group">
+											<label for="name">Email Id</label><font color="red">*&nbsp;</font>
+											<input type="text1" class="form-control only_removeSpace" id="cntmail"
+												placeholder="Enter Email Id" maxlength="50">
+											<p id="addOrgUserErrorEmail"
+												style="color: red; display: none;">Please enter Email
+												Id.</p>
+											<p id="emailInvalid" style="color: red; display: none">
+												Invalid Email Id.</p>
+											<p id="useralreadyexists" style="color: red; display: none">
+												Sorry this Email Id already registered.</p>
+										</div>
+
+										<div class="form-group">
+
+											<div class="col-md-12">
+												<label class="radio-inline"> Is Org Admin : <input
+													id="id_yes" type="radio" name="isOrgAdmin" value="yes" />
+													Yes
+												</label> <label class="radio-inline"> <input id="id_no"
+													type="radio" name="isOrgAdmin" value="no" checked="checked" />No
+												</label>
+
+											</div>
+										</div>
+
+										<div class="form-group">
+											<button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+										</div>
+									</div>
+								</form>
+								<div id="access_Denied"
+									style="display: none; color: #30a5ff; text-align: center; padding-bottom: 20%; padding-left: 5%; padding-right: 5%; padding-top: 5%;">
+									<img alt="loading_cursor"
+										src="../resources/images/Access-Denied_finall.jpg">
+									<h4>
+										<b>Your are Not Authorized to view this page </b>
+									</h4>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<div class="footer-left">
+							<span>&copy; 2015. BPA Technologies. All Rights Reserved.</span>
+						</div>
+						<div class="footer-right">
+							<span>Powered by: <a href="http://www.bpatech.com" target="_blank">BPA
+									Technologies</a></span>
+						</div>
+					</div>
+					<!--footer-->
+				</div>
+			</div>
+			<!-- custom block Ui STARTS HERE-->
+	<div id="loading-div-background" style="display: none;">
+		<div id="loading-div" class="ui-corner-all">
+			<img style="height: 50%; margin: 10px;"
+				src="../../resources/images/loading.gif" alt="Loading.." />
+			<h4 style="color: #ffffff; font-size: 18px; font-weight: normal;">Please
+				wait...</h4>
+		</div>
+	</div>
+	<!-- custom block Ui ENDS HERE-->
+		</div>
+	</div>
+	<div class="modal fade" id="success_modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">Success</h4>
+				</div>
+				<div class="modal-body">
+					<p>Organization user created successfully</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="ok_btn">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../../resources/js/atoc_common.js"></script>
+	<script src="../../view/admin/addOrganizationUser.js"></script>
+	<script src="../../resources/js/config.js"></script>
+	<script src="../../resources/js/RestrictRedirection.js"></script>
+	<script src="../../resources/js/BackButtonRestrict.js"></script>
+
+	<script src="../../resources/js/jquery.dataTables.js"></script>
+	<script src="../../resources/js/datatable_responsive.js"></script>
+	<!--
+ <script src="../../resources/js/responsive-tables.js"></script>
+ -->
+	<script src="../../resources/js/Application.js"></script>
+	<script type="text/javascript"
+		src="../../resources/js/jquery.blockUI.js"></script>
+	<script>
+		setUserTokenToRequestHeader(sessionStorage.getItem("userToken"));
+		setProfileImage(sessionStorage.getItem("profileImgData"));
+	</script>
+
+</body>
+</html>

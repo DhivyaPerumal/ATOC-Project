@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATOC Registration</title>
+	<style>
+		.p 
+		{
+		  font-family: sans-serif;	
+		}
+		.logo 
+		{
+			width: 240px;
+		}
+
+	</style>
+  </head>
+  <body>
+	<table>
+	  <tr style="background:#0866c6; height: 110px;">
+		<td>
+			<div class="logo">
+				<img src="cid:atoclogo" />
+			</div>
+		</td>
+	  </tr>	
+      <tr>
+	  <td>
+		<table style="background:#F2F2F2; height: 110px;">
+          <tr>
+			<td><p>Hi ${firstName}</p><br/></td>
+		  </tr>
+		  <tr>
+			<td>
+			  <p>Thank you for registering with us. Please find the below credentials to access the application.</p>
+			  <p>Username: ${userEmail}</p>
+			  <p>Password: ${userPassword}</p>
+			   <p>Please click <a href = ${appURL}/>here</a> to access our application or copy and paste the following link into your browser:</p>
+			  <p>${appURL}</p>
+			  <p><b>Please do not reply to this auto generated email.</b></p><br/>
+              <p>Thanks,</p>
+			  <p>ATOC Team.</p>
+            </td>
+          </tr>
+        </table>
+	 </td>
+	  </tr>
+    </table>
+  </body>
+</html>

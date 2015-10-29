@@ -1,0 +1,592 @@
+/* .panel .panel-heading {
+	text-align: left;
+	background-color: #f5f7f7;
+	color: #2c3e50;
+	font-size: 17px;
+} */
+.unList{
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-start: 0px;
+  padding-left: 40px;
+  color:#666;
+	text-align:Justify
+}
+.p-section-info{
+	
+	color:#666;
+	text-align:Justify
+	}
+.panel .panel-tools {
+	float: right;
+	margin-top: -4px;
+	margin-right: -8px;
+}
+
+.grid .filters {
+	background-color: #fbfcfc;
+}
+
+.table .th .td {
+	cellpadding: 1px;
+	cellspacing: 1px;
+}
+
+.th {
+	background: #B4F114;
+}
+
+.ui-dialog .ui-state-error {
+	padding: .3em;
+}
+
+/* #content {
+	overflow: auto;
+	padding: 50px;
+} */
+div.form-group-continer {
+	padding-bottom: 7%;
+}
+
+/* .name_customStyle {
+	width: 75%;
+	height: 10%;
+	border-color: #004A93;
+} */
+.form-control {
+	border: 1px solid #5f6468;
+	box-shadow: #5f6468;
+}
+
+/*Css Code for login and Reset Password Page*/
+body.login {
+	color: #2c3e50;
+	background-color: #F5F5F5;
+}
+
+#login_signin_btn {
+	padding: 6px 107px;
+	background: rgba(255, 255, 255, 0.1);
+	display: block;
+	color: #fff;
+}
+
+body.forgot {
+	color: #2c3e50;
+	background-color: #bdc3c7;
+}
+
+body.login .wrapper {
+	padding: 20px;
+	background-color: #0866c6;
+	webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	-webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04);
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	margin: 10% auto;
+	width: 300px;
+}
+
+body.forgot .wrapper {
+	padding: 20px;
+	
+	background-color: #0866c6;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	-webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04);
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.04);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	margin: 13% auto;
+	width: 300px;
+}
+
+div {
+	display: block;
+}
+
+a {
+	color: #F0F8FF;
+	text-decoration: none;
+	background: transparent;
+}
+
+a:hover {
+    color: #fff;
+}
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 13px;
+	font-family: RobotoLight, Helvetica Neue, Helvetica, sans-serif;
+}
+
+label,input,textarea,select,button {
+	font-size: 13px;
+}
+
+/* body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+} */
+body {
+	font-family: RobotoLight, Helvetica Neue, Helvetica, sans-serif;
+	/* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #333333;
+	background: url(../images/bg1.png);
+}
+
+html {
+	font-size: 62.5%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	margin-left:auto;
+        margin-right:auto;
+        width:100%;
+		height:90%;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+	width: 100%;
+	display: block;
+	color: #333333;
+	font-size: 21px;
+	border-bottom: 1px solid #e5e5e5;
+	color: #F0F8FF;
+}
+
+.text-center {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	min-width: 0;
+}
+
+}
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555555;
+	background-color: white;
+	background-image: none;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow
+		ease-in-out 0.15s;
+	-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out
+		0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+
+
+#signin_btn {
+	padding: 6px 100px;
+	background-color: #708090;
+}
+
+
+
+#forgot_goback {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+#imglogin {
+	height: 50%;
+	width: auto;
+}
+
+#imgsrcforgot {
+	height: 50%;
+	width: auto;
+}
+
+#forgot_email {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #555555;
+	background-color: white;
+	background-image: none;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border-color ease-in-out 0.15s, box-shadow
+		ease-in-out 0.15s;
+	-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out
+		0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+/*End of Login page and Reset Page Css*/
+
+/* 
+/*Css Style for registration page*/
+.fixed-panel {
+	max-height: 100px;
+	max-width: 100%;
+	text-align: left;
+}
+
+#registrationfirstname {
+	color: #000000;
+}
+
+`
+#registrationpage_panel {
+	background-color: #FFFFFF;
+	width: 1000px;
+	height: 1300px;
+	border: 2px solid #0866c6;
+	padding: 20px;
+}
+
+#registration {
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+/* #submitBtn
+{
+
+background-color: #708090;
+} */
+/* #Logbtn {
+	padding: 6px 50px;
+	background-color: #708090;
+}
+ */
+#registerhere {
+	background-color: #bdc3c7;
+}
+
+#registrationpage {
+	font-size: 200%;
+}
+
+/*End of Registration Page Css*/
+* /
+	/*Code for MyProfile Page*/ 
+
+#myProfilepage_panel {
+	background-color: #FFFFFF;
+	width: 1000px;
+	height: 300px;
+	padding: 20px;
+}
+
+.myProfile {
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background-color: #708090;
+}
+
+/*End of MyProfile Page*/
+.col-xs-12,.col-xs-1,.col-xs-7 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 0px;
+	padding-left: 20px;
+}
+
+/* #schedule_execute_btn {
+	background-color: #708090;
+} */
+
+label {
+	font-size: 13px;
+}
+
+#registrationmainContainer {
+	padding-top: 50px;
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-bottom: 150px;
+}
+
+#registrationwidget {
+	background: #fff;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	border: 1px solid #0866c6;
+	border-top: 0;
+	/* margin-bottom: 20px; */
+	
+}
+
+.input-xlarge {
+	padding-right: 40px;
+}
+
+.modal-header {
+	padding: 15px;
+	border-bottom: 1px solid #0866c6;
+	min-height: 16.4286px;
+	background-color: #0866c6;
+	color: #ffffff;
+}
+
+
+#org_panel
+{
+border: 2px solid #0866c6;
+}
+#forgot_send_btn
+{
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: inline-block;
+    padding: 6px 50px;
+}
+
+#pageTitle_id{
+	margin-left: -20px;
+}
+#successfulpanel
+{
+border: 2px solid #0866c6;
+padding: 20px;
+}
+
+#successfulogin
+{
+ padding: 6px 70px;
+ 
+}
+
+#successfulh2
+{
+color : #FF9933;
+}
+#successfulh4
+{
+color : #009900;
+}
+.btn-success
+{
+color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+  
+}
+
+
+
+.btn-danger
+{
+color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+
+}
+.btn-primary
+{
+color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+  
+
+}
+.btn-primary:hover
+{
+background-color: #3071a9;
+ border-color: #285e8e;
+
+}
+.btn-success:hover
+{
+background-color: #3071a9;
+  border-color: #285e8e;
+}
+.btn-danger:hover{
+background-color: #3071a9;
+  border-color: #285e8e;
+}
+
+/* #registrationSubmit,#registration_cancel_btn
+{
+margin : 20px;
+} */
+.btn-info btn-lg
+{
+color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+
+}
+#close
+{
+color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+}
+#close:hover{
+background-color: #3071a9;
+  border-color: #285e8e;
+
+}
+.btn-lg
+{
+color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+}
+
+.btn-lg:hover{
+background-color: #3071a9;
+  border-color: #285e8e;
+}
+.btn-sm-3
+{
+color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+
+}
+.btn-sm-3:hover
+{
+background-color: #3071a9;
+  border-color: #285e8e;
+
+}
+.btn-info
+{
+color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+
+}
+.btn-info:hover
+{
+background-color: #3071a9;
+  border-color: #285e8e;
+
+}
+
+.btn-default {
+	color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+}
+.btn-default:hover{
+background-color: #3071a9;
+  border-color: #285e8e;
+}
+ #resetsearch_testsuit_btn
+ {
+ color: #fff;
+ background: #0866c6;
+  border-color: #0a6bce;
+ 
+ }
+ 
+ 
+ #myProfilePanel
+ {
+ margin-top : 20px;
+ margin-left : 150px;
+ margin-right : 150px;
+ }
+ #orgName
+ {
+ font-weight:normal;
+  }
+  #orgAddress
+ {
+ font-weight:normal;
+  }
+   #firstName
+ {
+ font-weight:normal;
+  }
+  #lastName
+ {
+ font-weight:normal;
+  }
+   #userEmail
+ {
+ font-weight:normal;
+  }
+  
+  @media screen and (min-width: 768px) {
+	
+	#regApproval_Modal .modal-dialog  {width:900px;}
+
+}
+
+#regApproval_Modal .modal-dialog  {width:70%;}
+
+ 
+.ui-widget-content a {
+    color: #333333;
+}
+ 
+.ui-widget-content a:hover {
+    color: #333333;
+}
+
+#doughnutchartwidget
+{
+height : 400px;
+}
+#barchartwidget
+{
+height : 400px;
+}
+
+.notes_align,.isadmin_align{
+	margin-left: 13px;
+	margin-right: 13px;
+}
+.addOrg_btn_align{
+	margin-left: 25px;
+}
+#failedtestaccordian
+{
+background-color: #FF4D4D;
+}
+#passedtestaccordian
+{
+background-color: #228B22;
+}
+#skippedtestaccordian
+{
+background-color: gray;
+}
+
